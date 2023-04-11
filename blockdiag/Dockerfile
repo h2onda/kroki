@@ -3,7 +3,7 @@ FROM python:3.11.0-alpine3.16
 RUN addgroup -g 1000 kroki && adduser -D -G kroki -u 1000 kroki
 
 # add runtime dependency
-RUN apk --update --no-cache add jpeg zlib fontconfig ttf-dejavu
+RUN apk --update --no-cache add jpeg zlib fontconfig unifont font-noto font-noto-extra font-noto-cjk font-noto-cjk-extra
 
 ENV LIBRARY_PATH=/lib:/usr/lib
 
